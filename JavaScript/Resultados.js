@@ -12,7 +12,7 @@ $(document).ready(function() {
                 case 0:
 
                     var prodId = getParameterByName('Nombre');
-                    $('#Nombre').val(prodId);
+                    $('#Nombre').text(prodId);
                     break;
                 case 1:
                     var prodId = getParameterByName('Email');

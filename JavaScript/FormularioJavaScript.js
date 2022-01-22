@@ -1,25 +1,25 @@
 $(document).ready(function() {
-
+    var cont = 1;
 
     $("#BotonGustos").click(function() {
 
         $("#Part4").show();
 
-        var Texto = $('#Gustos').val()
+
 
         $("#TablaGustos").append(
             $('<tr>')
             .append(
                 $('<td>')
                 .append(
-                    $('<input>').attr('type', 'text').attr('id', 'Gustos').disable
+                    $('<input>').attr('type', 'text').attr('id', 'GustosTabla' + cont)
 
                 )
             )
             .append(
                 $('<td>')
                 .append(
-                    $('<input>').attr('type', 'text').attr('id', 'Porcentaje').disable
+                    $('<input>').attr('type', 'text').attr('id', 'Porcentaje')
                 )
             )
             .append(
@@ -32,24 +32,13 @@ $(document).ready(function() {
 
 
         );
+        cont = cont + 1;
+    });
 
+    $("#BotonGustos").click(function() {
 
+        document.getElementById("GustosTabla" + cont).Value = document.getElementById("TextGustos").Value;
 
-        /*
-                alert($(this).parent().find('.data').text());
-                /*
-                        $(function(){
-                            $('#button').click(function(){
-                              alert($(this).parent().find('.data').text());
-                            });
-                          });
-
-
-
-                        $('#Gustos').value = $('#TextGustos').value;
-
-
-                */
     });
 
 
